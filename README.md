@@ -1,3 +1,9 @@
+working websockets app, for multiple clients.
+index.js - the node file for server.
+
+
+
+
 # Isolated
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
