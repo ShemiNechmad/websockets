@@ -23,8 +23,13 @@
             </div>
             <div style="margin-top:25px;">Enter your name:</div>
             <div><input class="nameInput" type="text" [(ngModel)]="name" (ngModelChange)="changeName($event)"
-                    maxLength="20" /> </div>
+                    (keyup.enter)="enterName()" maxLength="20" /> </div>
             <div><button class="formButton" (click)="enterName()">Go</button> </div>
+        </div>
+        <div [hidden]="!chatIsOpen" class="form">
+            <div class="formTitle">
+                You're in.
+            </div>
         </div>
         <div class="usersBox">
             <div class="usersTitle">USERS:</div>
