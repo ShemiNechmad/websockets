@@ -14,9 +14,10 @@ wsServer.on('request', function(request) {
   var connection = request.accept( null, request.origin);
     clients.push(connection);
     connection.on('message', function(message) {
-    console.log(message);
+    console.log(message.utf8Data);
+    let obj = JSON.parse(message.utf8Data);
     clients.forEach(function(client) {
-        client.send("{'author':'Shemi', 'message':'Nechmad'}");
+        client.send('{"author":"'+obj.author+'", "message":"'+obj.message+'"}');
     });
   });
 

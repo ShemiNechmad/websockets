@@ -1,3 +1,36 @@
-<button (click)="sendMsg()">Send Message</button>
+<div class="marginTop40"></div>
+<div class="body">
+    <div class="leftDiv">
+        <div class="title">
+            Corona Chat
+        </div>
+        <div #chatBox class="chatBox">
+            <div *ngFor="let chatting of chattings">
+                <div class="text">{{chatting.name}}: {{chatting.text}}</div>
+            </div>
+        </div>
+        <div *ngIf="chatIsOpen" class="inputBox">
+            <input class="textInput" type="text" [(ngModel)]="textInput" (ngModelChange)="changeTextInput($event)"
+                (keyup.enter)="submitText()" />
+            <button class="submitText" (click)="submitText()">Submit</button>
+        </div>
+    </div>
 
-{{message.message}}
+    <div class="rightDiv">
+        <div [hidden]="chatIsOpen" class="form">
+            <div class="formTitle">
+                JOIN THE CHAT
+            </div>
+            <div style="margin-top:25px;">Enter your name:</div>
+            <div><input class="nameInput" type="text" [(ngModel)]="name" (ngModelChange)="changeName($event)"
+                    maxLength="20" /> </div>
+            <div><button class="formButton" (click)="enterName()">Go</button> </div>
+        </div>
+        <div class="usersBox">
+            <div class="usersTitle">USERS:</div>
+            <div *ngFor="let user of users">
+                {{user.name}}
+            </div>
+        </div>
+    </div>
+</div>

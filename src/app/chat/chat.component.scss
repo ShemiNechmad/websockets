@@ -1,0 +1,96 @@
+.marginTop40 {
+    margin-top:80px;
+    width:100%;
+}
+.body {
+    width:100%;
+    height:100%;
+    display:flex;
+    .leftDiv {
+        width:65%;
+        .title {
+            font-family: sans-serif;
+            color:orange;
+            font-size: 100px;
+            font-weight: bold;
+            margin:0px 0px 0px 40px;
+        }
+        .chatBox {
+            width:95%;
+            height:500px;
+            background-color: white;
+            margin:0px 40px;
+            overflow-y: hidden;
+            overflow-y: auto;
+        }
+        .inputBox {
+            margin-top:15px;
+            margin-left:40px;
+            width:95%;
+            display:flex;
+            .textInput {
+                width:90%;
+                padding:8px 15px;
+                outline: none;
+                border-radius: 20px;
+            }
+            .submitText {
+                width:10%;
+                margin-left:5%;
+                padding:8px 15px;
+                outline: none;
+                border-radius: 20px;
+                color:white;
+                font-size: 18px;
+                background-color: blue;
+            }
+        }
+    }
+    .rightDiv {
+        font-family: sans-serif;
+        margin-left: 5%;
+        width:20%;
+        display: flex;
+        flex-direction: column;
+        .form {
+            margin-top: 120px;
+            width:100%;
+            border: solid 1px blue;
+            padding:5px;
+            height:200px;
+            .formTitle {
+                font-size: 20px;
+            }
+            .nameInput {
+                margin-top:10px;
+                width:90%;
+                padding:8px 15px;
+                outline: none;
+                border-radius: 20px;
+            }
+            .formButton {
+                margin-top:10px;
+                float:right;
+                padding:8px 15px;
+                outline: none;
+                border-radius: 20px;
+                color:white;
+                font-size: 18px;
+                background-color: blue;
+            }
+        }
+        .usersBox {
+            margin-top: 20px;
+            width:100%;
+            border: solid 1px blue;
+            padding:5px;
+            height:240px;
+            overflow: auto;
+            .usersTitle {
+                font-size: 20px;
+                color:green;
+            }
+        }
+    }
+    
+}

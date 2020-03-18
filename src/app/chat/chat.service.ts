@@ -17,10 +17,10 @@ export interface Message {
 })
 export class ChatService {
 
-  public messages: Subject<Message>;
+  public messages: Subject<any>;
 
   constructor(wsService: WebsocketService) {
-    this.messages = <Subject<Message>>wsService.connect(CHAT_URL).map(
+    this.messages = <Subject<any>>wsService.connect(CHAT_URL).map(
       (response: MessageEvent): any => {
         let data = (response.data);
         return {data}
